@@ -1,0 +1,8 @@
+INSERT INTO tb_perfil(NOME) VALUES('ADMIN');
+INSERT INTO tb_perfil(NOME) VALUES('USER');
+
+INSERT INTO tb_usuario(EMAIL, SENHA, PERFIL_ID)
+VALUES('admin@gmail.com', '$2a$10$oj23A2yYZaou/DGLy2XV3uy24QJUjDzJ/4T2cohiwKngWRCImWzbO', 1);
+
+INSERT INTO tb_usuario(EMAIL, SENHA, PERFIL_ID)
+VALUES('user@gmail.com', '$2a$10$U07ReiQvEl/PeTDBLJvfJOTYK4L1Ym5lTq00h26VDS9wUhNMQsXLm', 2);

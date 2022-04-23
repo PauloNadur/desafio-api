@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "110144c8-b6fb-4343-a9f3-59cf3824654e",
+		"name": "Desafio API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTENTICAÇÃO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"senha\" : \"Gft@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUÁRIO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"post_user_test@gft.com\",\r\n    \"senha\" : \"0000\",\r\n    \"perfilId\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POPULAR BANCO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY4OTc2fQ.RrdLTMGY2nWYMr76ZnOFlbF78HbFU9g9YZhcPCDwkjQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/popular",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"popular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCAR TODAS CATEGORIAS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/categoria",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCAR UMA CATEGORIA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categoria/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CADASTRAR UMA CATEGORIA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeCategoria\": \"Turma Teste\",\r\n    \"tecnologia\": \"Java\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categoria",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERAR UMA CATEGORIA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeCategoria\": \"Alterar Categoria Teste\",\r\n    \"tecnologia\": \"Python\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categoria/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXCLUIR UMA CATEGORIA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categoria/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCAR TODOS STARTERS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/starter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCAR UM STARTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/starter/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CADASTRAR UM STARTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Cadastrar Starter Teste\",\r\n    \"cpf\": \"00000000000\",\r\n    \"quatroLetras\": \"TEST\",\r\n    \"email\": \"teste@gft.com\",\r\n    \"categoria\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/starter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERAR UM STARTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Alterar Starter Teste\",\r\n    \"cpf\": \"00000000000\",\r\n    \"quatroLetras\": \"TEST\",\r\n    \"email\": \"teste@gft.com\",\r\n    \"categoria\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/starter/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXCLUIR UM STARTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjUwNjY3MDExfQ.cwoV12_OVpKOc_G7xESzznXBFNKrxE_K6Ba9E3aDcZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/starter/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

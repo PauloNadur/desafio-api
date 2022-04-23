@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "desafio_api.jwt.issuer",
+    "type": "java.lang.String",
+    "description": "A description for 'desafio_api.jwt.issuer'"
+  },
+  {
+    "name": "desafio.jwt.issuer",
+    "type": "java.lang.String",
+    "description": "A description for 'desafio.jwt.issuer'"
+  },
+  {
+    "name": "desafio_api.jwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'desafio_api.jwt.expiration'"
+  },
+  {
+    "name": "desafio_api.jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'desafio_api.jwt.secret'"
+  },
+  {
+    "name": "desafioapi.jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'desafioapi.jwt.secret'"
+  },
+  {
+    "name": "desafioapi.jwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'desafioapi.jwt.expiration'"
+  },
+  {
+    "name": "desafioapi.jwt.issuer",
+    "type": "java.lang.String",
+    "description": "A description for 'desafioapi.jwt.issuer'"
+  }
+]}
